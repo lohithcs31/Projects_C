@@ -2,9 +2,9 @@
 #include "contact.h"
 
 int main() {
-    int choice;
+    int choice; //Variable to store the user input on choice (List, Search, Edit, Delete)
     int index = 0;
-    AddressBook addressBook;
+    AddressBook addressBook; //Declaring a variable of AddressBook datatype
     initialize(&addressBook); // Initialize the address book
 
     do {
@@ -32,13 +32,6 @@ int main() {
                 deleteContact(&addressBook);
                 break;
             case 5:
-                // printf("Select sort criteria:\n");
-                // printf("1. Sort by name\n");
-                // printf("2. Sort by phone\n");
-                // printf("3. Sort by email\n");
-                // printf("Enter your choice: ");
-                // int sortChoice;
-                // scanf("%d", &sortChoice);
                 listContacts(&addressBook);
                 break;
             case 6:
