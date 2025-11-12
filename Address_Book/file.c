@@ -17,6 +17,7 @@ void saveContactsToFile(AddressBook *addressBook)
     {
         fprintf(fptr,"%s,%s,%s\n",addressBook->contacts[i].name,addressBook->contacts[i].phone,addressBook->contacts[i].email);
     }
+    fclose(fptr);
 }
 
 void loadContactsFromFile(AddressBook* addressBook)
@@ -35,4 +36,5 @@ void loadContactsFromFile(AddressBook* addressBook)
     {
         fscanf(fptr,"%[^,],%[^,],%[^\n]\n",addressBook->contacts[i].name,addressBook->contacts[i].phone,addressBook->contacts[i].email);
     }
+    fclose(fptr);
 }

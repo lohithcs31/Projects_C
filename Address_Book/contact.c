@@ -93,8 +93,9 @@ void createContact(AddressBook *addressBook)
             printf("Invalid email address, please enter valid email address\n");
         }
     }while(!valid_email);
-
+    //Increment the contact count to update that a contact is added to the address book
     addressBook->contactCount++;
+    printf("Contact created successfully!\n");
 }
 
 int searchContact(AddressBook *addressBook, int *index) 
@@ -224,6 +225,7 @@ void editContact(AddressBook *addressBook)
                     if(valid_name)
                     {
                         strcpy(addressBook->contacts[index].name,name);
+                        printf("Name edited successfully!\n");
                     }
                     else
                     {
@@ -242,6 +244,7 @@ void editContact(AddressBook *addressBook)
                     if(valid_number)
                     {
                         strcpy(addressBook->contacts[index].phone,phone);
+                        printf("Phone number edited successfully!\n");
                     }
                     else
                     {
@@ -260,6 +263,7 @@ void editContact(AddressBook *addressBook)
                     if(valid_email)
                     {
                         strcpy(addressBook->contacts[index].email,email);
+                        printf("Email address edited successfully!\n");
                     }
                     else
                     {
@@ -299,7 +303,7 @@ void deleteContact(AddressBook *addressBook)
     }
     //Decrement the contact count to update that a contact is deleted from the address book
     addressBook->contactCount--;
-
+    printf("Contact deleted successfully!\n");
 }
 
 //Function to check whether the user entered valid name
