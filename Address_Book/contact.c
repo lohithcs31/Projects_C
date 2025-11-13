@@ -4,12 +4,72 @@
 #include "contact.h"
 #include "file.h"
 
-void listContacts(AddressBook *addressBook) 
+void listContacts(AddressBook *addressBook, int sortChoice) 
 {
-    // List all the contacts present in the address book
-    for(int i=0;i<addressBook->contactCount;i++)
+    //Switch case to handle sort by name,phone number or email address
+    switch(sortChoice)
     {
-        printf("%s %s %s\n",addressBook->contacts[i].name,addressBook->contacts[i].phone,addressBook->contacts[i].email);
+        case 1://Implementing bubble sort algorithm to sort the contacts of the address book by name
+                for(int i=0;i<(addressBook->contactCount-1);i++)
+                {
+                   for(int j=0;j<(addressBook->contactCount-i-1);j++)
+                   {
+                        if(strcmp(addressBook->contacts[j].name,addressBook->contacts[j+1].name)>0)
+                        {
+                            Contact temp;
+                            temp = addressBook->contacts[j];
+                            addressBook->contacts[j] = addressBook->contacts[j+1];
+                            addressBook->contacts[j+1] = temp;
+                        }
+                   } 
+                }
+                //Print all the contacts in the address book after sorting
+                for(int i=0;i<addressBook->contactCount;i++)
+                {
+                    printf("%s %s %s\n",addressBook->contacts[i].name,addressBook->contacts[i].phone,addressBook->contacts[i].email);
+                }
+                break;
+        case 2://Implementing bubble sort algorithm to sort the contacts of the address book by phone number
+                for(int i=0;i<(addressBook->contactCount-1);i++)
+                {
+                   for(int j=0;j<(addressBook->contactCount-i-1);j++)
+                   {
+                        if(strcmp(addressBook->contacts[j].phone,addressBook->contacts[j+1].phone)>0)
+                        {
+                            Contact temp;
+                            temp = addressBook->contacts[j];
+                            addressBook->contacts[j] = addressBook->contacts[j+1];
+                            addressBook->contacts[j+1] = temp;
+                        }
+                   } 
+                }
+                //Print all the contacts in the address book after sorting
+                for(int i=0;i<addressBook->contactCount;i++)
+                {
+                    printf("%s %s %s\n",addressBook->contacts[i].name,addressBook->contacts[i].phone,addressBook->contacts[i].email);
+                }
+                break;
+        case 3://Implementing bubble sort algorithm to sort the contacts of the address book by email address
+                for(int i=0;i<(addressBook->contactCount-1);i++)
+                {
+                   for(int j=0;j<(addressBook->contactCount-i-1);j++)
+                   {
+                        if(strcmp(addressBook->contacts[j].email,addressBook->contacts[j+1].email)>0)
+                        {
+                            Contact temp;
+                            temp = addressBook->contacts[j];
+                            addressBook->contacts[j] = addressBook->contacts[j+1];
+                            addressBook->contacts[j+1] = temp;
+                        }
+                   } 
+                }
+                //Print all the contacts in the address book after sorting
+                for(int i=0;i<addressBook->contactCount;i++)
+                {
+                    printf("%s %s %s\n",addressBook->contacts[i].name,addressBook->contacts[i].phone,addressBook->contacts[i].email);
+                }
+                break;
+        default: printf("Invalid choice!\n");
     }
 }
 
