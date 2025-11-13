@@ -18,7 +18,7 @@ void createContact(AddressBook *addressBook);
 int searchContact(AddressBook *addressBook, int *index);
 void editContact(AddressBook *addressBook);
 void deleteContact(AddressBook *addressBook);
-void listContacts(AddressBook *addressBook);
+void listContacts(AddressBook *addressBook, int sortChoice);
 void initialize(AddressBook *addressBook);
 void saveAndExit(AddressBook *AddressBook);
 void loadContactsFromFile(AddressBook *addressBook);
