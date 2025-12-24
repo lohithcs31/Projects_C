@@ -18,6 +18,7 @@ A command-line based address book application built in C.
 - Structured modular code
 
 For full details, see the `README.md` inside the **Address_Book** directory.
+
 ---
 
 ### 📁 Steganography
