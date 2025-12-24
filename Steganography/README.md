@@ -1,6 +1,6 @@
 # 🕵️‍♂️ LSB Image Steganography (C)
 
-This project implements **Least Significant Bit (LSB) image steganography** in **C**, allowing you to **hide and retrieve secret messages** inside bitmap images. LSB steganography works by modifying the least significant bit of image pixels to store hidden data, which keeps the visual changes imperceptible to the human eye. :contentReference[oaicite:0]{index=0}
+This project implements **Least Significant Bit (LSB) image steganography** in **C**, allowing you to **hide and retrieve secret messages** inside bitmap images. LSB steganography works by modifying the least significant bit of image pixels to store hidden data, which keeps the visual changes imperceptible to the human eye.
 
 ---
 
