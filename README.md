@@ -73,6 +73,7 @@ gcc -Wall *.c -o stego
 
 **Lohith C S**
 Automotive Software Developer | Embedded C & AUTOSAR
+
 Feel free to connect on:
 
 * LinkedIn: [https://www.linkedin.com](https://www.linkedin.com)
